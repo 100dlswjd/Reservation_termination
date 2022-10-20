@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(193, 193)
+        MainWindow.resize(193, 163)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout_3 = QHBoxLayout(self.centralwidget)
@@ -53,6 +53,8 @@ class Ui_MainWindow(object):
 
         self.spinBox_timer = QSpinBox(self.centralwidget)
         self.spinBox_timer.setObjectName(u"spinBox_timer")
+        self.spinBox_timer.setMaximum(36000)
+        self.spinBox_timer.setValue(600)
 
         self.horizontalLayout.addWidget(self.spinBox_timer)
 
@@ -69,17 +71,6 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout)
-
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(4, 4, 4, 4)
-        self.label_remain_timer = QLabel(self.centralwidget)
-        self.label_remain_timer.setObjectName(u"label_remain_timer")
-
-        self.horizontalLayout_2.addWidget(self.label_remain_timer)
-
-
-        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
         self.pushButton = QPushButton(self.centralwidget)
         self.pushButton.setObjectName(u"pushButton")
@@ -108,7 +99,6 @@ class Ui_MainWindow(object):
         self.label_help.setText(QCoreApplication.translate("MainWindow", u"1\ubd84 = 60\ucd08, 1\uc2dc\uac04 = 3600\ucd08", None))
         self.label_timer.setText(QCoreApplication.translate("MainWindow", u"\uc2dc\uac04", None))
         self.label_sec.setText(QCoreApplication.translate("MainWindow", u"\ucd08", None))
-        self.label_remain_timer.setText("")
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\ud655\uc778", None))
     # retranslateUi
 
